@@ -42,7 +42,12 @@ const Carousel = () => {
     <View>
       <Text>Carousel</Text>
 
-      <FlatList data={carouselData} renderItem={renderItem} horizontal />
+      <FlatList
+        data={carouselData}
+        renderItem={renderItem}
+        horizontal
+        pagingEnabled={true}
+      />
     </View>
   );
 };
