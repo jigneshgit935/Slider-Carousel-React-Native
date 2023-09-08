@@ -38,6 +38,23 @@ const Carousel = () => {
     );
   };
 
+  // Render Dot Indicator
+  const renderDotsIndicator = () => {
+    return carouselData.map((dot, index) => {
+      return (
+        <View
+          style={{
+            backgroundColor: 'red',
+            height: 10,
+            width: 10,
+            borderRadius: 5,
+            marginHorizontal: 6,
+          }}
+        ></View>
+      );
+    });
+  };
+
   return (
     <View>
       <Text>Carousel</Text>
@@ -48,6 +65,16 @@ const Carousel = () => {
         horizontal
         pagingEnabled={true}
       />
+
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'center',
+          marginTop: 30,
+        }}
+      >
+        {renderDotsIndicator()}
+      </View>
     </View>
   );
 };
